@@ -1,40 +1,45 @@
 <script src="https://code.jquery.com/jquery-2.2.2.min.js" integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>
 <script src="main.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="main.css"></link>
 
-<p>
-  You find a cabin in the woods. 
-  <span class="choice" data-choicename="cabin">Do you 
-    <a href="#" class="choice-item">go inside</a> or 
-    <a href="#" class="choice-item">run away</a>?
-  </span>
-</p>
-
-<div class="choice-result" data-choicename="cabin">
-  <p class="choice-result-item">
-    You stepped inside. You are in a dark hallway. 
-    <span class="choice" data-choicename="light">Do you 
-      <a href="#" class="choice-item">reach for the light</a> or 
-      <a href="#" class="choice-item">run away</a>?</span>
+<div style="padding: 10px 10%; font-family: 'Open Sans', sans-serif;">
+  <h1>Interactive</h1>
+  <p>
+    You find a cabin in the woods. 
+    <span class="choice" data-choicename="cabin">Do you 
+      <a href="#" class="choice-item">go inside</a> or 
+      <a href="#" class="choice-item">run away</a>?
+    </span>
   </p>
-  <p class="choice-result-item">You ran away.</p>
-</div>
 
-<div class="choice-result" data-choicename="light">
-  <p class="choice-result-item">
-    You turned on the light. There are three doors in front of you.
+  <div class="choice-result" data-choicename="cabin">
+    <p class="choice-result-item">
+      You stepped inside. You are in a dark hallway. 
+      <span class="choice" data-choicename="light">Do you 
+        <a href="#" class="choice-item">reach for the light</a> or 
+        <a href="#" class="choice-item">run away</a>?</span>
+    </p>
+    <p class="choice-result-item">You ran away.</p>
+  </div>
 
-    <span class="choice" data-choicename="door">Do you open the door on the 
-      <a href="#" class="choice-item">left</a>,
-      <a href="#" class="choice-item">center</a>, or
-      <a href="#" class="choice-item">right</a>?</span>
-  </p>
-  <p class="choice-result-item">You ran away.</p>
-</div>
+  <div class="choice-result" data-choicename="light">
+    <p class="choice-result-item">
+      You turned on the light. There are three doors in front of you.
 
-<div class="choice-result" data-choicename="door">
-  <p class="choice-result-item">
-    You opened the left door.
-  </p>
-  <p class="choice-result-item">You opened the center door.</p>
-  <p class="choice-result-item">You opened the right door.</p>
+      <span class="choice" data-choicename="door">Do you open the door on the 
+        <a href="#" class="choice-item">left</a>,
+        <a href="#" class="choice-item">center</a>, or
+        <a href="#" class="choice-item">right</a>?</span>
+    </p>
+    <p class="choice-result-item">You ran away.</p>
+  </div>
+
+  <div class="choice-result" data-choicename="door">
+    <p class="choice-result-item">
+      You opened the left door.
+    </p>
+    <p class="choice-result-item">You opened the center door.</p>
+    <p class="choice-result-item">You opened the right door.</p>
+  </div>
 </div>

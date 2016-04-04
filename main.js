@@ -9,12 +9,13 @@ $(document).ready(function() {
 
     var result = $('.choice-result[data-choicename="' + choicename + '"]');
 
-    result.find('.choice-result-item').hide().eq(index).show();
+    result.find('.choice-result-item').hide().eq(index).slideDown(100);
 
-    $('.choice-result').slice($(result).index()).find('.choice-result-item').hide();
+    $('.choice-result').slice($(result).index() - 1).find('.choice-result-item').hide();
 
     return false;
   });
 
   $('.choice-result .choice-result-item').hide();
+  $('.choice .choice-item').addClass('disabled');
 });
