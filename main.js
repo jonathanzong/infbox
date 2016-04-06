@@ -1,21 +1,19 @@
 'use strict';
 
 $(document).ready(function() {
-  $('.choice .choice-item').click(function() {
-    $('.choice .choice-item').removeClass("disabled").not(this).addClass("disabled");
+  $('choices choice').click(function() {
+    $('choices choice').removeClass("disabled").not(this).addClass("disabled");
 
-    var choicename = $(this).parent().data('choicename');
-    var index = $(this).index();
+    var topic = $(this).parent().attr('topic');
+    var choiceIndex = $(this).index();
 
-    var result = $('.choice-result[data-choicename="' + choicename + '"]');
+    var topicResults = $('results[topic="' + topic + '"]');
+    
+    $('results').slice(topicResults.index('results')).find('result').hide();
 
-    result.find('.choice-result-item').hide().eq(index).slideDown(100);
-
-    $('.choice-result').slice($(result).index() - 1).find('.choice-result-item').hide();
-
-    return false;
+    topicResults.find('result').hide().eq(choiceIndex).slideDown(100);
   });
 
-  $('.choice-result .choice-result-item').hide();
-  $('.choice .choice-item').addClass('disabled');
+  $('results result').hide();
+  $('choices choice').addClass('disabled');
 });

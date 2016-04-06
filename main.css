@@ -1,15 +1,16 @@
-a.choice-item, a.choice-item:active, a.choice-item:visited {
+choice {
   color: #2996cc;
   border-bottom: 0.5px solid #2996cc;
   text-decoration: none;
   padding-bottom: 1px;
+  cursor: pointer;
 }
 
-a.choice-item:hover {
+choice:hover {
   color: #777;
   border-bottom: 0.5px solid #777;
 }
 
-a.choice-item.disabled {
+choice.disabled {
   border-bottom: 0.5px dotted #777;
 }
